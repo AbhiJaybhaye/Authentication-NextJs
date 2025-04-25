@@ -28,6 +28,7 @@ export default function ForgotPasswordPage() {
       console.log("OTP sent to your email");
       toast.success("OTP sent to your email");
       setStep("otp");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(error.response?.data?.message || "Failed to send OTP");
     }
@@ -43,6 +44,7 @@ export default function ForgotPasswordPage() {
       await axios.post("/api/users/verify-otp", { email, otp });
       toast.success("OTP verified");
       setStep("reset");
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error("Invalid OTP");
     }
@@ -66,6 +68,7 @@ export default function ForgotPasswordPage() {
       setTimeout(() => {
         router.push("/login");
       }, 1500);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error("Password reset failed");
     }

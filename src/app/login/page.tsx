@@ -39,6 +39,7 @@ export default function LoginPage() {
       console.log("Login successful", response.data);
       toast.success("Login successful...!!");
       router.push("/profile");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error("Login failed", error.message);
       toast.error("Password is Incorrect");

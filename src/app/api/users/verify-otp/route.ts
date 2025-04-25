@@ -18,6 +18,7 @@ const POST = async (req: Request) => {
         }
         return new Response(JSON.stringify({ success: true }), { status: 200 }); 
         
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
         return new Response(JSON.stringify({ error: error.message }), { status: 500 }); 
     }

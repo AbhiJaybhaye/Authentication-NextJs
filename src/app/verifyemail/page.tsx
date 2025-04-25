@@ -39,6 +39,7 @@ export default function VerifyEmail() {
         toast.error("Failed to send OTP.");
         setErrorMessage("Failed to send OTP. Try again.");
       }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       const error =
         err.response?.data?.error ||
@@ -71,6 +72,7 @@ export default function VerifyEmail() {
         toast.error("Invalid OTP. Please try again.");
         setErrorMessage("Invalid OTP. Please try again.");
       }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       const error =
         err.response?.data?.error ||

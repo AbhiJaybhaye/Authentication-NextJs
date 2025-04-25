@@ -17,6 +17,7 @@ export default function ProfilePage() {
       await axios.get("/api/users/logout");
       toast.success("Logout successful");
       router.push("/login");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.log(error.message);
       toast.error(error.message);
@@ -34,6 +35,7 @@ export default function ProfilePage() {
         setDetails(false);
         setData("nothing");
       }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.log(error.message);
       toast.error(error.message);

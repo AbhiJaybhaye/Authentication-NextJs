@@ -67,6 +67,7 @@ export default function SignupPage() {
       setUser({ email: "", password: "", username: "" });
       setConfirmPassword("");
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.log("Signup failed", error.message);
       toast.error("Signup failed, User already exists");
